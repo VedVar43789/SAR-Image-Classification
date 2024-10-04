@@ -27,32 +27,6 @@ The primary challenge lies in the noisy nature of SAR images, primarily due to s
 # Project Structure
 
 The project structure is organized as follows:
-
-css
-Copy code
-├── dataset/
-│   └── train/
-│       ├── agriculture/
-│       ├── barren/
-│       ├── grassland/
-│       └── urban/
-├── models/
-│   └── sar_cnn_model.h5
-├── notebooks/
-│   └── data_preprocessing.ipynb
-│   └── model_training.ipynb
-├── src/
-│   └── data_loader.py
-│   └── speckle_filters.py
-│   └── model.py
-├── requirements.txt
-└── README.md
-dataset/: Contains the training data, split into four subfolders for each class.
-models/: Stores the trained SAR-CNN model.
-notebooks/: Jupyter notebooks for data preprocessing and model training.
-src/: Source files containing data loading, model architecture, and speckle filtering code.
-requirements.txt: Python libraries required to run the project.
-README.md: This file.
 Dataset
 
 The dataset comprises 16,000 images in total, with 4,000 images per class. The data is stored in the following structure:
@@ -61,6 +35,8 @@ dataset/train/agriculture/: Contains 4000 SAR images of agricultural land.
 dataset/train/barren/: Contains 4000 SAR images of barren land.
 dataset/train/grassland/: Contains 4000 SAR images of grassland.
 dataset/train/urban/: Contains 4000 SAR images of urban areas.
+
+
 All images are preprocessed using speckle filters before being fed into the model for training.
 
 # Preprocessing
