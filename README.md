@@ -1,21 +1,5 @@
 # SAR Image Classification Project
 
-Table of Contents
-Project Overview
-Project Structure
-Dataset
-Preprocessing
-Model Architecture
-Speckle Filtering
-Training the Model
-Evaluation
-Installation and Usage
-Results
-Contributing
-License
-Contact
-Project Overview
-
 This project involves classifying Synthetic Aperture Radar (SAR) images into four distinct land cover classes:
 
 Agriculture
