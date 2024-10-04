@@ -24,6 +24,8 @@ Grassland
 Urban
 The primary challenge lies in the noisy nature of SAR images, primarily due to speckle noise. To address this, speckle filtering techniques like Lee and Gamma MAP filters are applied, followed by Convolutional Neural Network (CNN)-based image classification. This project uses a custom-built CNN model and aims to maximize accuracy, precision, and recall while maintaining computational efficiency.
 
+
+
 # Project Structure
 
 The project structure is organized as follows:
@@ -39,6 +41,8 @@ dataset/train/urban/: Contains 4000 SAR images of urban areas.
 
 All images are preprocessed using speckle filters before being fed into the model for training.
 
+
+
 # Preprocessing
 
 Speckle noise is a common issue in SAR images, degrading the quality and affecting classification accuracy. The following preprocessing steps are applied to each image:
@@ -49,6 +53,8 @@ Lee Filter: Applied to reduce speckle noise by using the local statistics of eac
 Gamma MAP Filter: An adaptive filter that uses the probability distribution of the speckle to reduce noise.
 Normalization: The pixel values are normalized to [0, 1].
 The preprocessing steps can be found in the data_preprocessing.ipynb notebook.
+
+
 
 # Model Architecture
 
@@ -62,6 +68,8 @@ Dense Layers: Two fully connected layers to map the features to the output class
 Output Layer: A softmax layer for classifying the input image into one of the four classes.
 The model architecture is defined in src/model.py.
 
+
+
 # Speckle Filtering
 
 Two key filters are implemented to reduce noise in the SAR images:
@@ -69,6 +77,8 @@ Two key filters are implemented to reduce noise in the SAR images:
 Lee Filter: This filter computes the local mean and variance for noise reduction while preserving edges.
 Gamma MAP Filter: A more advanced filter that uses the multiplicative noise model, particularly suited for SAR image analysis.
 The filters are implemented in src/speckle_filters.py.
+
+
 
 # Training the Model
 
@@ -82,6 +92,8 @@ Epochs: 10
 Learning Rate: 0.001 (fixed)
 The training is performed using TensorFlow/Keras and can be reproduced by running the model_training.ipynb notebook.
 
+
+
 # Evaluation
 
 The model is evaluated on various performance metrics, including:
@@ -91,6 +103,8 @@ Precision: The ratio of true positives to the sum of true and false positives.
 Recall: The ratio of true positives to the sum of true positives and false negatives.
 Confusion Matrix: To evaluate the performance across each class.
 You can find the evaluation results in model_training.ipynb.
+
+
 
 # Installation and Usage
 
@@ -121,6 +135,8 @@ Open and run the data_preprocessing.ipynb notebook to apply speckle filtering an
 Run the model_training.ipynb notebook to train the model and evaluate its performance.
 Results
 
+
+
 # The following are the key results from the SAR image classification model:
 
 Accuracy: 85% on the test dataset.
@@ -129,13 +145,12 @@ Recall: 0.84 (average across all classes).
 Confusion Matrix: The model performed well in agriculture and urban classification but had some misclassifications in barren and grassland categories.
 For detailed results, refer to the model_training.ipynb notebook.
 
+
 # Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request with detailed descriptions of your changes. Contributions related to improving accuracy, implementing more advanced speckle filters, or optimizing model performance are highly appreciated!
 
-# License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 # Contact
 
